@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore Holidays India - Your Gateway to Incredible Journeys</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <h2>Explore Holidays India</h2>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#destinations">Destinations</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
+                    <li><a href="#pricing">Packages</a></li>
+                    <li><a href="#testimonials">Testimonials</a></li>
+                    <li><a href="#blog">Travel Tips</a></li>
+                    <li><a href="#faq">FAQ</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Your Gateway to Incredible Journeys</h1>
+            <p>Discover budget-friendly, hassle-free journeys. Our trips include everything you need—no hidden costs, just great experiences!</p>
+            <button class="cta-button" onclick="scrollToSection('destinations')">Explore Destinations</button>
+        </div>
+        <div class="hero-image">
+            <div class="hero-slider">
+                <div class="slide active">
+                    <img src="https://wallpaperaccess.com/full/1894584.jpg" alt="Taj Mahal">
+                </div>
+                <div class="slide">
+                    <img src="https://images.unsplash.com/photo-1514278444923-352c6127d3f0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Rajasthan Fort">
+                </div>
+                <div class="slide">
+                    <img src="https://images.unsplash.com/photo-1587474260584-136574528ed5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="India Gate">
+                </div>
+            </div>
+            <div class="slider-controls">
+                <button class="slider-btn prev" onclick="changeSlide(-1)">❮</button>
+                <button class="slider-btn next" onclick="changeSlide(1)">❯</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Destinations Section -->
+    <section id="destinations" class="destinations">
+        <div class="container">
+            <h2>Explore Our Best Travel Destinations</h2>
+            <div class="destinations-grid">
+                <div class="destination-card" data-destination="agra">
+                    <div class="card-image">
+                        <img src="https://tourscanner.com/blog/wp-content/uploads/2022/07/places-to-visit-in-Agra.jpg" alt="Taj Mahal Agra">
+                        <div class="card-overlay">
+                            <span class="price">From ₹2,999</span>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <div class="destination-meta">
+                            <span class="duration">2 Days 1 Night</span>
+                            <span class="rating">⭐ 4.8</span>
+                        </div>
+                        <h3>Discover Agra</h3>
+                        <p>The City of Eternal Love - Discover Agra, the timeless city of love and legacy. Marvel at the breathtaking Taj Mahal, explore the mighty Agra Fort.</p>
+                        <ul class="highlights">
+                            <li><i class="fas fa-check"></i> Taj Mahal Sunrise Visit</li>
+                            <li><i class="fas fa-check"></i> Agra Fort Tour</li>
+                            <li><i class="fas fa-check"></i> Local Market Shopping</li>
+                        </ul>
+                        <div class="card-footer">
+                            <button class="book-btn" onclick="openBookingModal('Agra')">Reserve Your Spot Today</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="destination-card" data-destination="rajasthan">
+                    <div class="card-image">
+                        <img src="https://www.holidify.com/images/cmsuploads/compressed/Screenshot2021-01-13at5.37.51PM_20210113173805_20210113173813.png" alt="Rajasthan">
+                        <div class="card-overlay">
+                            <span class="price">From ₹5,999</span>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <div class="destination-meta">
+                            <span class="duration">5 Days 4 Nights</span>
+                            <span class="rating">⭐ 4.9</span>
+                        </div>
+                        <h3>Discover Rajasthan</h3>
+                        <p>The Land of Kings & Timeless Grandeur - Step into the royal heart of India with majestic forts, golden deserts, and colorful palaces.</p>
+                        <ul class="highlights">
+                            <li><i class="fas fa-check"></i> Jaipur City Palace</li>
+                            <li><i class="fas fa-check"></i> Udaipur Lake Tour</li>
+                            <li><i class="fas fa-check"></i> Desert Safari</li>
+                        </ul>
+                        <div class="card-footer">
+                            <button class="book-btn" onclick="openBookingModal('Rajasthan')">Reserve Your Spot Today</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="destination-card" data-destination="golden-triangle">
+                    <div class="card-image">
+                        <img src="https://photographytoursinindia.com/wp-content/uploads/2021/03/Golden_triangle.jpg" alt="Golden Triangle">
+                        <div class="card-overlay">
+                            <span class="price">From ₹8,999</span>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <div class="destination-meta">
+                            <span class="duration">7 Days 6 Nights</span>
+                            <span class="rating">⭐ 4.7</span>
+                        </div>
+                        <h3>Golden Triangle</h3>
+                        <p>Experience the cultural soul of India through the Golden Triangle Tour, connecting Delhi, Agra, and Jaipur.</p>
+                        <ul class="highlights">
+                            <li><i class="fas fa-check"></i> Delhi Historical Tour</li>
+                            <li><i class="fas fa-check"></i> Taj Mahal Visit</li>
+                            <li><i class="fas fa-check"></i> Jaipur Pink City</li>
+                        </ul>
+                        <div class="card-footer">
+                            <button class="book-btn" onclick="openBookingModal('Golden Triangle')">Reserve Your Spot Today</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="destination-card" data-destination="delhi">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1587474260584-136574528ed5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" alt="India Gate Delhi">
+                        <div class="card-overlay">
+                            <span class="price">From ₹1,999</span>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <div class="destination-meta">
+                            <span class="duration">1 Day City Tour</span>
+                            <span class="rating">⭐ 4.6</span>
+                        </div>
+                        <h3>Discover Delhi</h3>
+                        <p>Where Every Street Has a Story - Explore ancient ruins, spiritual temples, modern art galleries, and luxury shopping districts.</p>
+                        <ul class="highlights">
+                            <li><i class="fas fa-check"></i> India Gate & Red Fort</li>
+                            <li><i class="fas fa-check"></i> Lotus Temple Visit</li>
+                            <li><i class="fas fa-check"></i> Street Food Tour</li>
+                        </ul>
+                        <div class="card-footer">
+                            <button class="book-btn" onclick="openBookingModal('Delhi')">Reserve Your Spot Today</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="destination-card" data-destination="varanasi">
+                    <div class="card-image">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/3/31/Ganges_River_bank_in_Varanasi.jpg" alt="Varanasi Ganges">
+                        <div class="card-overlay">
+                            <span class="price">From ₹3,999</span>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <div class="destination-meta">
+                            <span class="duration">3 Days 2 Nights</span>
+                            <span class="rating">⭐ 4.8</span>
+                        </div>
+                        <h3>Varanasi Spiritual Journey</h3>
+                        <p>Experience the spiritual capital of India - sacred Ganges, ancient temples, and mesmerizing evening aarti ceremonies.</p>
+                        <ul class="highlights">
+                            <li><i class="fas fa-check"></i> Ganges Boat Ride</li>
+                            <li><i class="fas fa-check"></i> Kashi Vishwanath Temple</li>
+                            <li><i class="fas fa-check"></i> Evening Aarti Ceremony</li>
+                        </ul>
+                        <div class="card-footer">
+                            <button class="book-btn" onclick="openBookingModal('Varanasi')">Reserve Your Spot Today</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="destination-card" data-destination="goa">
+                    <div class="card-image">
+                        <img src="https://curlytales.com/wp-content/uploads/2020/07/alexey-turenkov-bWJiSZjIgTM-unsplash.jpg" alt="Goa Beach">
+                        <div class="card-overlay">
+                            <span class="price">From ₹4,999</span>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <div class="destination-meta">
+                            <span class="duration">4 Days 3 Nights</span>
+                            <span class="rating">⭐ 4.7</span>
+                        </div>
+                        <h3>Goa Beach Paradise</h3>
+                        <p>Sun, sand, and serenity - Discover pristine beaches, vibrant nightlife, Portuguese heritage, and delicious coastal cuisine.</p>
+                        <ul class="highlights">
+                            <li><i class="fas fa-check"></i> Beach Hopping Tour</li>
+                            <li><i class="fas fa-check"></i> Old Goa Churches</li>
+                            <li><i class="fas fa-check"></i> Water Sports Activities</li>
+                        </ul>
+                        <div class="card-footer">
+                            <button class="book-btn" onclick="openBookingModal('Goa')">Reserve Your Spot Today</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <h2>Plan Your Trip With Us</h2>
+            <p>Tell us how you like to travel, and we'll handle the rest!</p>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <i class="fas fa-user-tie"></i>
+                    <h3>Tailor-made trips</h3>
+                    <p>We design every trip around your preferences for a truly personal experience.</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-headset"></i>
+                    <h3>Local expertise & quick support</h3>
+                    <p>Our local team ensures smooth travel with prompt assistance, anytime you need it.</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-dollar-sign"></i>
+                    <h3>No hidden costs, full transparency</h3>
+                    <p>Clear pricing, no surprises—just honest travel planning you can trust.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials">
+        <div class="container">
+            <h2>Hear from Our Happy Travellers</h2>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p>"It was a beautiful trip. We visited Agra, Jaipur, Jodhpur with excellent organization. India is a fantastic country!"</p>
+                    <div class="author">
+                        <h4>Mr Ralph</h4>
+                        <span>USA</span>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p>"From the preparatory phase excellent availability and professionalism, offering valuable suggestions by itinerary."</p>
+                    <div class="author">
+                        <h4>UGO D</h4>
+                        <span>ITALY</span>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p>"I took my parents to Varanasi, and every detail was beautifully handled. The boat ride at sunrise was magical."</p>
+                    <div class="author">
+                        <h4>Meera</h4>
+                        <span>Noida</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Travel Gallery Section -->
+    <section id="gallery" class="gallery">
+        <div class="container">
+            <h2>Travel Moments Gallery</h2>
+            <p>Browse our Travel Moments Gallery to see real photos, memories, and happy travellers exploring India's best destinations</p>
+            <div class="gallery-grid">
+                <div class="gallery-item" onclick="openLightbox('https://tse3.mm.bing.net/th/id/OIP.Kq1fBD-icA_Q9v5OuG24FwHaEK?rs=1&pid=ImgDetMain&o=7&rm=3')">
+                    <img src="https://tse3.mm.bing.net/th/id/OIP.Kq1fBD-icA_Q9v5OuG24FwHaEK?rs=1&pid=ImgDetMain&o=7&rm=3" alt="Taj Mahal">
+                    <div class="gallery-overlay">
+                        <span>Taj Mahal, Agra</span>
+                    </div>
+                </div>
+                <div class="gallery-item" onclick="openLightbox('https://wallpaperaccess.com/full/8548945.jpg')">
+                    <img src="https://wallpaperaccess.com/full/8548945.jpg" alt="Amber Fort">
+                    <div class="gallery-overlay">
+                        <span>Amber Fort, Jaipur</span>
+                    </div>
+                </div>
+                <div class="gallery-item" onclick="openLightbox('https://images.unsplash.com/photo-1587474260584-136574528ed5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80')">
+                    <img src="https://images.unsplash.com/photo-1587474260584-136574528ed5?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="India Gate">
+                    <div class="gallery-overlay">
+                        <span>India Gate, Delhi</span>
+                    </div>
+                </div>
+                <div class="gallery-item" onclick="openLightbox('https://d27p8o2qkwv41j.cloudfront.net/wp-content/uploads/2015/12/1024px-Ganges_River_bank_in_Varanasi-1.jpg')">
+                    <img src="https://d27p8o2qkwv41j.cloudfront.net/wp-content/uploads/2015/12/1024px-Ganges_River_bank_in_Varanasi-1.jpg" alt="Ganges Varanasi">
+                    <div class="gallery-overlay">
+                        <span>Ganges, Varanasi</span>
+                    </div>
+                </div>
+                <div class="gallery-item" onclick="openLightbox('https://indiamagica.com/wp-content/uploads/2019/02/palolem-beach.jpg')">
+                    <img src="https://indiamagica.com/wp-content/uploads/2019/02/palolem-beach.jpg" alt="Palolem Beach">
+                    <div class="gallery-overlay">
+                        <span>Palolem Beach, Goa</span>
+                    </div>
+                </div>
+                <div class="gallery-item" onclick="openLightbox('https://pixelz.cc/wp-content/uploads/2018/07/ama-dablam-mountain-himalaya-range-nepal-uhd-4k-wallpaper.jpg')">
+                    <img src="https://pixelz.cc/wp-content/uploads/2018/07/ama-dablam-mountain-himalaya-range-nepal-uhd-4k-wallpaper.jpg" alt="Himalayas">
+                    <div class="gallery-overlay">
+                        <span>Himalayan Mountains</span>
+                    </div>
+                </div>
+                <div class="gallery-item" onclick="openLightbox('https://th.bing.com/th/id/R.e417d0173dfe2bb9273917e6e902546c?rik=mjBbYnFE2tFOdw&riu=http%3a%2f%2fwww.visittnt.com%2fblog%2fwp-content%2fuploads%2f2015%2f08%2fkerala_backwater.jpg&ehk=mdoYiy%2bIMnNmz9DD2qc5IeueHAUPKs5c0uNh97%2foTCo%3d&risl=&pid=ImgRaw&r=0')">
+                    <img src="https://th.bing.com/th/id/R.e417d0173dfe2bb9273917e6e902546c?rik=mjBbYnFE2tFOdw&riu=http%3a%2f%2fwww.visittnt.com%2fblog%2fwp-content%2fuploads%2f2015%2f08%2fkerala_backwater.jpg&ehk=mdoYiy%2bIMnNmz9DD2qc5IeueHAUPKs5c0uNh97%2foTCo%3d&risl=&pid=ImgRaw&r=0" alt="Kerala Backwaters">
+                    <div class="gallery-overlay">
+                        <span>Kerala Backwaters</span>
+                    </div>
+                </div>
+                <div class="gallery-item" onclick="openLightbox('https://tse1.explicit.bing.net/th/id/OIP.0ojhxNJGOzh6iTIms3eDTgHaE8?rs=1&pid=ImgDetMain&o=7&rm=3')">
+                    <img src="https://tse1.explicit.bing.net/th/id/OIP.0ojhxNJGOzh6iTIms3eDTgHaE8?rs=1&pid=ImgDetMain&o=7&rm=3" alt="Taj Mahal Sunrise">
+                    <div class="gallery-overlay">
+                        <span>Taj Mahal Sunrise</span>
+                    </div>
+                </div>
+                <div class="gallery-item" onclick="openLightbox('https://tse4.mm.bing.net/th/id/OIP.B__0mCSPlHPZ2aKA1KtDBgHaE8?rs=1&pid=ImgDetMain&o=7&rm=3')">
+                    <img src="https://tse4.mm.bing.net/th/id/OIP.B__0mCSPlHPZ2aKA1KtDBgHaE8?rs=1&pid=ImgDetMain&o=7&rm=3" alt="City Palace">
+                    <div class="gallery-overlay">
+                        <span>City Palace, Jaipur</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Travel Tips Section -->
+    <section id="blog" class="travel-tips">
+        <div class="container">
+            <h2>Travel Tips, Guides, and Inspirations</h2>
+            <div class="tips-grid">
+                <article class="tip-card">
+                    <div class="tip-image">
+                        <img src="https://images.unsplash.com/photo-1587474260584-136574528ed5?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Delhi India Gate">
+                    </div>
+                    <div class="tip-content">
+                        <div class="tip-meta">
+                            <span class="date">Nov 15, 2024</span>
+                            <span class="category">Delhi</span>
+                        </div>
+                        <h3>Best Places to Visit in Delhi</h3>
+                        <p>Discover the soul of India's capital - from India Gate to ancient temples and modern galleries. Explore Red Fort, Qutub Minar, Lotus Temple, and more.</p>
+                        <a href="#" class="read-more">Read more →</a>
+                    </div>
+                </article>
+
+                <article class="tip-card">
+                    <div class="tip-image">
+                        <img src="https://dynamic.tourtravelworld.com/package-images/photo-big/dir_16/479423/201069.jpg" alt="Rajasthan Desert Safari">
+                    </div>
+                    <div class="tip-content">
+                        <div class="tip-meta">
+                            <span class="date">Nov 5, 2024</span>
+                            <span class="category">Rajasthan</span>
+                        </div>
+                        <h3>Rajasthan Desert Safari Guide</h3>
+                        <p>Experience the magic of Thar Desert with our complete guide to desert safaris, camel rides, and staying in luxury desert camps.</p>
+                        <a href="#" class="read-more">Read more →</a>
+                    </div>
+                </article>
+
+                <article class="tip-card">
+                    <div class="tip-image">
+                        <img src="https://img.veenaworld.com/wp-content/uploads/2020/05/Spiritual-Places-to-Visit-in-Varanasi.jpg" alt="Spiritual Places in Varanasi">
+                    </div>
+                    <div class="tip-content">
+                        <div class="tip-meta">
+                            <span class="date">Oct 28, 2024</span>
+                            <span class="category">Spiritual</span>
+                        </div>
+                        <h3>Varanasi: A Spiritual Journey</h3>
+                        <p>Discover the spiritual capital of India. Learn about the best ghats, Ganga Aarti timing, and spiritual experiences in this ancient city.</p>
+                        <a href="#" class="read-more">Read more →</a>
+                    </div>
+                </article>
+
+                <article class="tip-card">
+                    <div class="tip-image">
+                        <img src="https://redthreadhotels.com/wp-content/uploads/2024/12/Beach-Hopping-in-Goa-1.webp" alt="Beach Hopping in Goa">
+                    </div>
+                    <div class="tip-content">
+                        <div class="tip-meta">
+                            <span class="date">Oct 20, 2024</span>
+                            <span class="category">Beaches</span>
+                        </div>
+                        <h3>Goa Beach Hopping Guide</h3>
+                        <p>Explore the best beaches in Goa from North to South. Discover hidden gems, water sports, and the perfect beach for your mood.</p>
+                        <a href="#" class="read-more">Read more →</a>
+                    </div>
+                </article>
+
+                <article class="tip-card">
+                    <div class="tip-image">
+                        <img src="https://www.luckybelly.com/wp-content/uploads/2020/09/31-Best-Indian-Street-Food-You-May-Like-to-Try.jpg" alt="Best Indian Street Food">
+                    </div>
+                    <div class="tip-content">
+                        <div class="tip-meta">
+                            <span class="date">Oct 15, 2024</span>
+                            <span class="category">Food</span>
+                        </div>
+                        <h3>Indian Street Food Guide</h3>
+                        <p>A foodie's guide to India's best street foods. From Delhi's chaat to Mumbai's vada pav, discover authentic flavors across India.</p>
+                        <a href="#" class="read-more">Read more →</a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="pricing">
+        <div class="container">
+            <h2>Popular Tour Packages</h2>
+            <p>Choose from our carefully crafted tour packages designed for every type of traveler</p>
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3>Budget Explorer</h3>
+                        <div class="price">
+                            <span class="currency">₹</span>
+                            <span class="amount">1,999</span>
+                            <span class="period">/person</span>
+                        </div>
+                        <p>Perfect for solo travelers and backpackers</p>
+                    </div>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-check"></i> Budget accommodation</li>
+                        <li><i class="fas fa-check"></i> Local transportation</li>
+                        <li><i class="fas fa-check"></i> Guided city tours</li>
+                        <li><i class="fas fa-check"></i> Breakfast included</li>
+                        <li><i class="fas fa-times"></i> Airport transfers</li>
+                        <li><i class="fas fa-times"></i> Luxury accommodation</li>
+                    </ul>
+                    <button class="pricing-btn">Book Now</button>
+                </div>
+
+                <div class="pricing-card featured">
+                    <div class="pricing-badge">Most Popular</div>
+                    <div class="pricing-header">
+                        <h3>Cultural Heritage</h3>
+                        <div class="price">
+                            <span class="currency">₹</span>
+                            <span class="amount">5,999</span>
+                            <span class="period">/person</span>
+                        </div>
+                        <p>Experience India's rich cultural heritage</p>
+                    </div>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-check"></i> 3-star hotels</li>
+                        <li><i class="fas fa-check"></i> Private transportation</li>
+                        <li><i class="fas fa-check"></i> Expert guides</li>
+                        <li><i class="fas fa-check"></i> All meals included</li>
+                        <li><i class="fas fa-check"></i> Airport transfers</li>
+                        <li><i class="fas fa-times"></i> Luxury experiences</li>
+                    </ul>
+                    <button class="pricing-btn">Book Now</button>
+                </div>
+
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3>Luxury Experience</h3>
+                        <div class="price">
+                            <span class="currency">₹</span>
+                            <span class="amount">12,999</span>
+                            <span class="period">/person</span>
+                        </div>
+                        <p>Ultimate luxury travel experience</p>
+                    </div>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-check"></i> 5-star luxury hotels</li>
+                        <li><i class="fas fa-check"></i> Private vehicle & driver</li>
+                        <li><i class="fas fa-check"></i> Personal guide</li>
+                        <li><i class="fas fa-check"></i> All meals & fine dining</li>
+                        <li><i class="fas fa-check"></i> VIP experiences</li>
+                        <li><i class="fas fa-check"></i> Spa & wellness</li>
+                    </ul>
+                    <button class="pricing-btn">Book Now</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="faq">
+        <div class="container">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <h4>What is included in the tour packages?</h4>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Our tour packages include accommodation, transportation, guided tours, and meals as specified. Each package has different inclusions - check the package details for specific information. Airport transfers are included in premium packages.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <h4>How do I make a booking?</h4>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>You can book through our website by clicking "Reserve Your Spot" on any destination, or fill out the contact form for customized trips. Our team will get back to you within 24 hours to confirm your booking.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <h4>What is the best time to visit India?</h4>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>The best time to visit most parts of India is from October to March when the weather is pleasant. However, this varies by region - hill stations are best in summer, while Rajasthan is ideal in winter.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <h4>Do you offer customized tours?</h4>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes! We specialize in creating tailor-made itineraries based on your preferences, budget, and travel style. Contact us with your requirements and our experts will design the perfect trip for you.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <h4>What payment methods do you accept?</h4>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>We accept all major credit/debit cards, UPI, bank transfers, and digital wallets. Payment can be made in installments for packages above ₹10,000.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <h4>Is travel insurance included?</h4>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Travel insurance is not included in our packages but we highly recommend it. We can assist you in getting comprehensive travel insurance coverage for your trip.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Contact Us to Customize Your Travel Experience</h2>
+            <p>We'd love to help you design a journey tailored just for you.</p>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>info@exploreholidaysindia.com</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <span>+91 7703814474</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone-alt"></i>
+                        <span>+39 335 354 558</span>
+                    </div>
+                </div>
+                <form class="contact-form" id="contactForm">
+                    <div class="form-group">
+                        <input type="text" id="name" placeholder="Your Name *" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" placeholder="Your Email *" required>
+                    </div>
+                    <div class="form-group">
+                        <select id="destination" required>
+                            <option value="">Select Destination *</option>
+                            <option value="rajasthan">Discover Rajasthan</option>
+                            <option value="agra">Discover Agra</option>
+                            <option value="delhi">Discover Delhi</option>
+                            <option value="golden-triangle">Golden Triangle</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <select id="trip-type" required>
+                            <option value="">Select Trip Type *</option>
+                            <option value="taj-mahal">Tour the Taj Mahal in Agra</option>
+                            <option value="golden-triangle-delhi">Golden Triangle Tour from Delhi</option>
+                            <option value="golden-wildlife">Golden Triangle & Wildlife Tour</option>
+                            <option value="rajasthan-royal">Rajasthan Tour Package: Explore the Royal Legacy</option>
+                            <option value="delhi-history">Delhi Tour: A Journey Through India's Living History</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" placeholder="Your Message" rows="4"></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lightbox Modal -->
+    <div id="lightboxModal" class="lightbox-modal">
+        <div class="lightbox-content">
+            <span class="lightbox-close" onclick="closeLightbox()">&times;</span>
+            <img id="lightboxImage" src="" alt="Gallery Image">
+            <div class="lightbox-caption"></div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Explore Holidays India</h3>
+                    <p>Your trusted partner for incredible journeys across India.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#destinations">Destinations</a></li>
+                        <li><a href="#testimonials">Testimonials</a></li>
+                        <li><a href="#blog">Travel Tips</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Popular Destinations</h4>
+                    <ul>
+                        <li><a href="#destinations">Discover Agra</a></li>
+                        <li><a href="#destinations">Discover Rajasthan</a></li>
+                        <li><a href="#destinations">Golden Triangle</a></li>
+                        <li><a href="#destinations">Discover Delhi</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Explore Holidays India. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+   <!-- Booking Modal -->
+<div id="bookingModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeBookingModal()">&times;</span>
+        <h2>Book Your Trip to <span id="modalDestination"></span></h2>
+
+        <form id="bookingForm">
+            <div class="form-group">
+                <input type="text" id="bookingName" placeholder="Your Name *" required>
+            </div>
+
+            <div class="form-group">
+                <input type="email" id="bookingEmail" placeholder="Your Email *" required>
+            </div>
+
+            <div class="form-group">
+                <input type="tel" id="bookingPhone" placeholder="Your Phone *" required>
+            </div>
+
+            <div class="form-group">
+                <input type="date" id="bookingDate" required>
+            </div>
+
+            <div class="form-group">
+                <input type="number" id="bookingGuests" placeholder="Number of Guests *" min="1" required>
+            </div>
+
+            <div class="form-group">
+                <textarea id="bookingMessage" placeholder="Special Requirements" rows="3"></textarea>
+            </div>
+
+            <button type="submit" class="submit-btn">Confirm Booking</button>
+        </form>
+    </div>
+</div>
+
+
+    <!-- Success Message -->
+    <div id="successMessage" class="success-message">
+        <div class="success-content">
+            <i class="fas fa-check-circle"></i>
+            <h3>Thank You!</h3>
+            <p>Your message has been sent successfully. We'll get back to you soon!</p>
+            <button onclick="closeSuccessMessage()">Close</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
